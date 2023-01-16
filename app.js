@@ -5,15 +5,19 @@ const score = document.querySelector('#score');
 
 
 //Removing the mole, which means creatina new  grid without a mole
-
 function randomSquare(){
     squares.forEach(square =>{
-        square.callList.remove('mole')
+        square.classList.remove('mole')
     })
+    
 
-
-    let randomSquare = square[Math.floor(Math.random() * 9)]
-    randomeSquare.classList.add('.mole')
-
-
+    let randomSquare = squares[Math.floor(Math.random() * 9)]
+    randomSquare.classList.add('mole');
 }
+
+function moveMole(){
+    let timerId= null
+    timerId = setInterval(randomSquare,500)
+}
+
+moveMole()
