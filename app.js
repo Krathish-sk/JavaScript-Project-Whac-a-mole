@@ -6,6 +6,8 @@ const score = document.querySelector('#score');
 
 let result=0
 let hitPosition
+let currentTime = 10
+let timerId= null
 
 //Removing the mole, which means creatina new  grid without a mole
 function randomSquare(){
@@ -33,8 +35,18 @@ squares.forEach(square => {
 
 
 function moveMole(){
-    let timerId= null
     timerId = setInterval(randomSquare,500)
 }
-
 moveMole()
+function countDown(){
+    currentTime--
+    
+    timeLeft.textContent = currentTime
+
+    if(currentTime == 0){
+        clearInterval(countDownTimerId)
+        clearInterval(timerId)
+        alert('Game Over & the score is '+ result)
+    }
+}
+let countDownTimerId = setInterval(countDown,1000)
