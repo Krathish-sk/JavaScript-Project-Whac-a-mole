@@ -41,6 +41,7 @@ function minusTime() {
   }
   else{
     alert("Cannot be below 10");
+  }
 }
 
 //Removing the mole, which means creatina new  grid without a mole
