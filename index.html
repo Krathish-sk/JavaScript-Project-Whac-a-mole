@@ -1,31 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Whac-A-Mole</title>
-    <link href="styles.css" rel="stylesheet">
-</head>
-<body>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <br />
+    <h2 style="text-align: center">Whac -A- Mole</h2>
 
-        <h2>Score :- </h2>
-        <h3 id="score">0</h3>
+    <div class="boxes">
+      <div class="left-content">
         <h2>Time Left :-</h2>
-        <h3 id="time-left">60</h3>
-    
-        <div class="grid"> <!-- Creating the grid -->
-        <div class="square" id="1"></div>
-        <div class="square" id="2"></div>
-        <div class="square mole" id="3"></div>
-        <div class="square" id="4"></div>
-        <div class="square" id="5"></div>
-        <div class="square" id="6"></div>
-        <div class="square" id="7"></div>
-        <div class="square" id="8"></div>
-        <div class="square" id="9"></div>
+        <h3>
+          <span id="time-left"></span>
+          <img
+            class="addTime"
+            src="Images/add-button.png"
+            alt="Add time"
+            height="25px"
+            width="25px"
+          />
+          <img
+            class="minusTime"
+            src="Images/minus.png"
+            alt="Minus time"
+            height="23px"
+            width="23px"
+          />
+        </h3>
+
+        <h2>Score :-</h2>
+        <h3 id="score">0</h3>
+      </div>
+
+      <div class="right-content">
+        <div class="grid">
+          <!-- Creating the grid -->
+          <div class="square" id="1"></div>
+          <div class="square" id="2"></div>
+          <div class="square mole" id="3"></div>
+          <div class="square" id="4"></div>
+          <div class="square" id="5"></div>
+          <div class="square" id="6"></div>
+          <div class="square" id="7"></div>
+          <div class="square" id="8"></div>
+          <div class="square" id="9"></div>
+        </div>
+      </div>
     </div>
 
-    <script src="app.js" ></script>
-</body>
+    <div class="pop" id="popUp" style="background: rgb(187 247 208)">
+      <h2>Game Over</h2>
+      <b>
+        <p style="background: rgb(187 247 208)">
+          The Score is :- <span id="finalScore"></span>
+        </p>
+      </b>
+      <button
+        type="button"
+        onclick="window.location.reload()"
+        id="playAgain"
+        style="cursor: pointer"
+      >
+        OK
+      </button>
+    </div>
+    <div>
+      <button
+        class="startGame"
+        type="button"
+        id="startBtn"
+        style="cursor: pointer"
+        onclick="this.style.visibility='hidden'"
+      >
+        Start
+      </button>
+    </div>
+
+    <footer class="footer">
+      <div class="note">
+        <p><b>Note : Hit the mouse to earn score</b></p>
+      </div>
+      <div class="social">
+        <a
+          href="https://www.linkedin.com/in/krathish-s-k/"
+          target="_blank"
+          style="color: blue"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/krathish-sk"
+          target="_blank"
+          style="color: black"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://twitter.com/KrathishK"
+          target="_blank"
+          style="color: blue"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/krathish_K/"
+          target="_blank"
+          style="color: black"
+          ><i class="fab fa-instagram"></i
+        ></a>
+      </div>
+
+      <div class="copyRights">
+        <p style="font-size: 13px"><b>KSK @ 2001</b></p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
 </html>
