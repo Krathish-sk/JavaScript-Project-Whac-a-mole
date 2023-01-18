@@ -39,6 +39,8 @@ function minusTime() {
     currentTime -= 10;
     timeLeft.textContent = currentTime + " sec";
   }
+  else{
+    alert("Cannot be below 10");
 }
 
 //Removing the mole, which means creatina new  grid without a mole
